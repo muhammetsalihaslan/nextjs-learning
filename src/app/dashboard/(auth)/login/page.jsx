@@ -1,7 +1,7 @@
 "use client";
-import { signIn } from "next-auth/react";
 import React from "react";
 import styles from "./page.module.css";
+import { signIn } from "next-auth/react";
 
 const Login = () => {
   return (
