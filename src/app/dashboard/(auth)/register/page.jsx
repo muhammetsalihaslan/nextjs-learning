@@ -12,8 +12,8 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const name = e.target[0].value;
-    const email = e.target[0].value;
-    const password = e.target[0].value;
+    const email = e.target[1].value;
+    const password = e.target[2].value;
 
     try {
       const res = await fetch("/api/auth/register", {
@@ -58,8 +58,8 @@ const Register = () => {
           className={styles.input}
         />
         <button className={styles.button}>Register</button>
+        {err && "Something went wrong!"}
       </form>
-      {err && "Something went wrong!"}
       <span className={styles.or}>- OR -</span>
       <Link className={styles.link} href="/dashboard/login">
         Login with an existing account
